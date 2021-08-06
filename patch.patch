@@ -1,0 +1,39 @@
+diff --git a/Patcher/MainWindow.xaml.cs b/Patcher/MainWindow.xaml.cs
+index c49c8c0..6d04acc 100644
+--- a/Patcher/MainWindow.xaml.cs
++++ b/Patcher/MainWindow.xaml.cs
+@@ -43,7 +43,7 @@ namespace Patcher
+                 if (m_patcher.IsOutdated())
+                 {
+                     var downloadUrl = GithubFileRetriever.PATCHER_REPO_RELEASES_PATH;
+-                    ShowMessageBox($"Your patcher is out of date. Opening {downloadUrl} so you can download the new version manually");
++                    ShowMessageBox($"Your patcher is out of date. Opening {downloadUrl} so you can download the latest version manually");
+                     Process.Start(downloadUrl);
+                     Close();
+                     return;
+diff --git a/Patching/GithubFileRetriever.cs b/Patching/GithubFileRetriever.cs
+index d8db268..1ad8745 100644
+--- a/Patching/GithubFileRetriever.cs
++++ b/Patching/GithubFileRetriever.cs
+@@ -16,7 +16,7 @@ namespace Patching
+ 
+         private static string PATCHER_REPO_RAW_PATH = $"https://raw.githubusercontent.com/{GITHUB_GROUP_NAME}/Patcher";
+ 
+-        public static string PATCHER_REPO_RELEASES_PATH = $"https://github.com/{GITHUB_GROUP_NAME}/Patcher/releases/download";
++        public static string PATCHER_REPO_RELEASES_PATH = $"https://github.com/{GITHUB_GROUP_NAME}/Patcher/releases";
+ 
+         private DirectoryInfo m_tmpDir;
+ 
+diff --git a/Patching/Patcher.cs b/Patching/Patcher.cs
+index f1212a0..fb07b0b 100644
+--- a/Patching/Patcher.cs
++++ b/Patching/Patcher.cs
+@@ -8,7 +8,7 @@ namespace Patching
+ {
+     public class Patcher
+     {
+-        private static string PATCHER_VERSION = "1.0.0";
++        private static string PATCHER_VERSION = "1.0.1";
+ 
+         private string m_hearthstoneDir;
+ 

@@ -16,7 +16,7 @@ namespace Patching
 
         private static string PATCHER_REPO_RAW_PATH = $"https://raw.githubusercontent.com/{GITHUB_GROUP_NAME}/Patcher";
 
-        public static string PATCHER_REPO_RELEASES_PATH = $"https://github.com/{GITHUB_GROUP_NAME}/Patcher/releases/download";
+        public static string PATCHER_REPO_RELEASES_PATH = $"https://github.com/{GITHUB_GROUP_NAME}/Patcher/releases";
 
         private DirectoryInfo m_tmpDir;
 

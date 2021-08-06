@@ -43,7 +43,7 @@ namespace Patcher
                 if (m_patcher.IsOutdated())
                 {
                     var downloadUrl = GithubFileRetriever.PATCHER_REPO_RELEASES_PATH;
-                    ShowMessageBox($"Your patcher is out of date. Opening {downloadUrl} so you can download the new version manually");
+                    ShowMessageBox($"Your patcher is out of date. Opening {downloadUrl} so you can download the latest version manually");
                     Process.Start(downloadUrl);
                     Close();
                     return;
