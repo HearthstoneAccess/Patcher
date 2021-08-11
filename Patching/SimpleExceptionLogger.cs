@@ -9,7 +9,7 @@ namespace Patching
 
         public static void LogException(Exception e)
         {
-            using (var sr = new StreamWriter(LOG_PATH, true))
+            using (var sr = new StreamWriter(LOG_PATH, false))
             {
                 sr.WriteLine(DateTime.UtcNow);
                 sr.WriteLine(e);

@@ -8,7 +8,7 @@ namespace Patching
 {
     public class Patcher
     {
-        private static string PATCHER_VERSION = "1.0.1";
+        private static string PATCHER_VERSION = "1.0.2";
 
         private string m_hearthstoneDir;
 
